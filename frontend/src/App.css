@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff8f0;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* CONTAINER */
+.container {
+  padding: 30px;
+}
+
+/* SEARCH */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 250px;
+}
+
+.search-bar button {
+  background: #ff7a18;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin: 0;
+  color: #ff7a18;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  margin-top: 10px;
+}
+
+.actions button {
+  margin-right: 10px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* COLORS FOR BUTTONS */
+.actions button:nth-child(1) {
+  background: #ff4d6d; /* like */
+  color: white;
+}
+
+.actions button:nth-child(2) {
+  background: #6c5ce7; /* comment */
+  color: white;
+}
+
+.actions button:nth-child(3) {
+  background: #f9ca24; /* rating */
+}
+
+/* CREATE PAGE INPUTS */
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+button {
+  background: #ff7a18;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
