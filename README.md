@@ -55,5 +55,150 @@ npm run dev
 
 ---
 
+## 📡 API Documentation
+
+Base URL:
+https://your-backend-url.onrender.com/api
+
+---
+
+## 🔍 GET /recipes
+
+Fetch recipes with optional filters.
+
+### Query Parameters
+
+| Parameter   | Type   | Description                          |
+|------------|--------|--------------------------------------|
+| ingredient | string | Filter by ingredient                 |
+| time       | number | Max cooking time (minutes)           |
+| author     | string | Filter by author                     |
+| rating     | number | Minimum rating                       |
+
+### Example
+GET /recipes?ingredient=chicken&time=30
+
+---
+
+## ➕ POST /recipes
+
+Create a new recipe.
+
+### Request Body
+```json
+{
+  "title": "Chicken Rice",
+  "description": "Simple dish",
+  "ingredients": ["chicken", "rice"],
+  "cookTime": 25
+}
+```
+
+### Response
+```json
+{
+  "message": "Recipe created successfully",
+  "recipe": {
+    "_id": "123",
+    "title": "Chicken Rice",
+    "description": "Simple dish",
+    "ingredients": ["chicken", "rice"],
+    "cookTime": 25
+  }
+}
+```
+
+---
+
+## ❤️ POST /recipes/:id/like
+
+Like a recipe.
+
+### Example
+POST /recipes/123/like
+
+### Response
+```json
+{
+  "message": "Recipe liked successfully"
+}
+```
+
+---
+
+## 💬 POST /recipes/:id/comment
+
+Add a comment to a recipe.
+
+### Request Body
+```json
+{
+  "text": "Looks delicious!"
+}
+```
+
+### Response
+```json
+{
+  "message": "Comment added successfully"
+}
+```
+
+---
+
+## ⭐ POST /recipes/:id/rate
+
+Rate a recipe.
+
+### Request Body
+```json
+{
+  "rating": 5
+}
+```
+
+### Response
+```json
+{
+  "message": "Rating submitted successfully"
+}
+```
+
+---
+
+## 👤 Authentication (Future Scope)
+
+- JWT-based authentication
+- Protected routes for creating recipes
+- User login/signup system
+
+---
+
+## ⚠️ Error Responses
+
+| Status Code | Meaning                |
+|------------|------------------------|
+| 400        | Bad Request            |
+| 401        | Unauthorized           |
+| 404        | Resource Not Found     |
+| 500        | Internal Server Error  |
+
+### Example
+```json
+{
+  "error": "Recipe not found"
+}
+```
+
+---
+
+## ⚙️ Notes
+
+- All data is stored in MongoDB Atlas
+- Backend built using Express.js
+- RESTful API design followed
+
+---
+
 ## 👨‍💻 Author
 Upendra
